@@ -20,5 +20,5 @@ fi
 # Install the requirements
 $VIRTUALENV/bin/pip install -r requirements.txt
 
-# Run a glorious Python 3 server
-$VIRTUALENV/bin/python3 app.py
+# Start the app using Gunicorn
+$VIRTUALENV/bin/gunicorn --bind 0.0.0.0:3000 app:app
