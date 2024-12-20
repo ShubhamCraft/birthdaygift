@@ -55,4 +55,4 @@ def home():
     return render_template("index.html", theme_message=theme_message, year_results=year_results, years=sorted(df['Year'].dropna().unique()))
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=True)
