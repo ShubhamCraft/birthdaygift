@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b61e0d39-9ba5-45b7-b0f0-c6ced4ea18f9" name="Changes" comment="App first commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b61e0d39-9ba5-45b7-b0f0-c6ced4ea18f9" name="Changes" comment="change in app run code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,11 +75,20 @@
       <option name="project" value="LOCAL" />
       <updated>1734688427248</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="change in app run code">
+      <option name="closed" value="true" />
+      <created>1734691264605</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734691264605</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="App first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="App first commit" />
+    <MESSAGE value="change in app run code" />
+    <option name="LAST_COMMIT_MESSAGE" value="change in app run code" />
   </component>
 </project>
