@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Direction Song Selector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background: url("{{ url_for('static', filename='one_direction_bg.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Happy Birthday Bhoomi 🎉</h1>
+        <h2>Find Your Favorite One Direction Songs!</h2>
+    </header>
+
+    <div class="form-section">
+        <form method="POST">
+            <h3>Select a Theme</h3>
+            <select name="theme" required>
+                <option value="" disabled selected>Select a Theme</option>
+                <option value="Love">Love</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Memories">Memories</option>
+            </select>
+            <button type="submit">Find Song</button>
+        </form>
+    </div>
+
+    {% if theme_message %}
+    <div class="result-section">
+        <h2>Your Song Recommendation</h2>
+        <p><strong>Song Title:</strong> {{ theme_message['song_title'] }}</p>
+        <p><strong>Album:</strong> {{ theme_message['album'] }}</p>
+        <p><strong>Lyrics:</strong> "{{ theme_message['lyrics'] }}"</p>
+        <a href="{{ theme_message['youtube_link'] }}" target="_blank">🎵 Listen on YouTube</a>
+    </div>
+    {% endif %}
+
+    <div class="form-section">
+        <form method="POST">
+            <h3>Select a Release Year</h3>
+            <select name="year" required>
+                <option value="" disabled selected>Select a Year</option>
+                {% for year in years %}
+                    <option value="{{ year }}">{{ year }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Find Songs</button>
+        </form>
+    </div>
+
+    {% if year_results is not none and not year_results.empty %}
+    <div class="result-section">
+        <h2>Songs Released in Selected Year</h2>
+        <ul>
+            {% for _, song in year_results.iterrows() %}
+                <li>
+                    <strong>{{ song['Song'] }}</strong> - {{ song['Album(s)'] }}
+                    <a href="https://www.youtube.com/results?search_query={{ song['Song'].replace(' ', '+') }}+One+Direction" target="_blank">🎵 Listen on YouTube</a>
+                    <p><strong>Lyrics:</strong> "{{ song['Lyrics'] }}"</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>

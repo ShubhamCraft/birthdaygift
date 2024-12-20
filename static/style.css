@@ -1,0 +1,86 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("{{ url_for('static', filename='one_direction_bg.jpg') }}");
+    background-size: cover;   /* Ensures the image covers the full viewport */
+    background-position: center;
+    height: 100vh;  /* Full viewport height */
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #ffcccb;
+}
+
+header h2 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #ffd700;
+}
+
+.form-section {
+    margin: 20px 0;
+}
+
+form h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+select, button {
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px 0;
+    width: 70%;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #ffcccb;
+    color: black;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f06292;
+}
+
+.result-section {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    border-radius: 10px;
+}
+
+.result-section h2 {
+    color: #c2185b;
+}
+
+a {
+    color: #c2185b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #880e4f;
+}
